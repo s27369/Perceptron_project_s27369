@@ -47,3 +47,9 @@ def dataset_info(dic):
     for k, v in list(dic.items())[:-1]: print(f'{k}: {len(v)} values, ranging from {min(v)} to {max(v)}')
     s = set(dic["result"])
     print(f'result: {len(s)} unique values {s}')
+
+def get_observation(dataset, index):
+    return [dataset[x][index] for x in dataset]
+
+def get_dataset_size(dataset):
+    return len(dataset["result"])
